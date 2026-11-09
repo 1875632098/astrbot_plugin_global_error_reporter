@@ -1,0 +1,23 @@
+name: astrbot_plugin_global_error_reporter
+display_name: 全局错误监控
+short_desc: 捕获 AstrBot 与插件异常，去重后推送到指定群
+desc: |
+  把 AstrBot 运行时的异常统一收集起来，格式化后推送到你指定的 QQ 群，方便及时发现插件报错、核心警告和未捕获异常。
+
+  - 捕获范围：日志系统中的警告级及以上记录（WARNING / ERROR / CRITICAL）、主线程未捕获异常、子线程未捕获异常。
+  - 来源标注：自动识别错误来自哪个插件、哪个模块、哪个函数，核心自身的报错标注为「AstrBot核心」。
+  - 去重合并：同一条错误在设定时间内只推送一次，避免刷屏。
+  - 长度截断：超长堆栈按配置截断，避免超出 QQ 消息长度限制。
+  - 自动补挂：运行期间会周期性检查并补挂新出现的 logger，插件热加载后也能继续捕获。
+  - 静默自身：监控器自己产生的日志不会再次进入监控队列，不会形成日志循环。
+  - 无指令、无工具，安装并填好通知群后自动运行。
+version: 1.0.0
+author: 白
+repo: https://github.com/1875632098/astrbot_plugin_global_error_reporter
+astrbot_version: ">=4.24.4"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 运维
+  - 监控
+  - 日志

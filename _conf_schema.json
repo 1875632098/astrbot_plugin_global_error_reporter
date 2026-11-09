@@ -1,0 +1,20 @@
+{
+  "notify_group": {
+    "type": "string",
+    "default": "",
+    "description": "错误通知群号",
+    "hint": "捕获到的错误会发送到这个 QQ 群，只填群号数字；留空则不发送，仅在日志里记录"
+  },
+  "dedupe_seconds": {
+    "type": "int",
+    "default": 300,
+    "description": "重复错误合并时间（秒）",
+    "hint": "同一条错误在这个时间内只会推送一次，避免刷屏"
+  },
+  "max_message_length": {
+    "type": "int",
+    "default": 3000,
+    "description": "单条错误最大长度",
+    "hint": "超出部分会被截断并标注"
+  }
+}
