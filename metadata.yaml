@@ -12,7 +12,7 @@ desc: |
   - 静默自身：监控器自己产生的日志不会再次进入监控队列，不会形成日志循环。
   - 无指令、无工具，安装并填好通知群后自动运行。
 version: 1.0.0
-author: 白
+author: 宁喵喵
 repo: https://github.com/1875632098/astrbot_plugin_global_error_reporter
 astrbot_version: ">=4.24.4"
 support_platforms:
